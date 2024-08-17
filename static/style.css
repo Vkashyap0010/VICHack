@@ -1,0 +1,75 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    /* background: url("../images/background.jpg") no-repeat center center fixed;  */
+    background: url("/static/images/background.jpg") no-repeat center center fixed;
+    /* background: url("{{ url_for('static', filename='images/background.jpg') }}") no-repeat center center fixed;  */
+    background-size: cover;
+    /* transform: rotate(90deg);  */
+    /* Change the rotation angle as needed */
+    /*background-color: #f8f9fa; */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8); /* Slight white background to make content readable */
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+
+h1 {
+    color: #333;
+    text-align: center;
+    /* color: #343a40; */
+}
+
+.card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    color: #495057;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+pre {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.recipe-output {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.recipe-output h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #007bff;
+}
