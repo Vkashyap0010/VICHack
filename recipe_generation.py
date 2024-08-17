@@ -34,6 +34,8 @@ class RecipeDataset(Dataset):
 from transformers import GPT2Tokenizer
 tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
 
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+
 # Create the dataset and dataloader
 recipe_data_file = 'path/to/recipe1m.json'
 recipe_dataset = RecipeDataset(recipe_data_file, tokenizer)
