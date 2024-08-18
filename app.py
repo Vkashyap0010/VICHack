@@ -42,19 +42,13 @@ def index():
             recipe = re.sub(r'\*\*(.*?)\*\*', r'<br><strong>\1</strong><br>', recipe)
 
             recipe = recipe.replace('*', '<br>')
+            recipe = recipe[3:]
 
-            return render_template('result.html', dish_name=dish_name, recipe=recipe, image_url=file_path)
+            return render_template('result.html', dish_name=dish_name, recipe=recipe, image_url=f'uploads/{filename}')
 
     return render_template('index.html')
 
-# @app.route(f'/delete_image/<filename>', methods=['POST'])
-# def delete_image(filename):
-#     try:
-#         file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-#         os.remove(file_path)
-#         return 'Image deleted', 200
-#     except FileNotFoundError:
-#         return 'Image not found', 404
+
 
 if __name__ == '__main__':
     app.run(debug=True)
