@@ -38,7 +38,5 @@ def image_recognition(image_path):
 
     predicted_class_label = predicted_class_label.replace('_', ' ')
 
-    print(predicted_class_label)
-
     return predicted_class_label
 
